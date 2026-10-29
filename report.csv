@@ -1,0 +1,9 @@
+check,result,details
+ssh_docker_info,OK,Docker version 29.9.2
+cli_containers_count,3,project=lab1
+api_containers_count,3,project=lab1
+network_table,OK,"lab1_backend -> ['app', 'db']; lab1_frontend -> ['app', 'proxy']"
+port_publishing_check,OK,лише proxy публікує порти
+http_attempt_1,200,elapsed=0.008s error=None
+http_attempt_2,200,elapsed=0.004s error=None
+cli_vs_api_diff,IDENTICAL,усі контейнери збігаються

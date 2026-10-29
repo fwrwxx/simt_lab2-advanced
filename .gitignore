@@ -1,0 +1,9 @@
+lab2_venv/
+.venv/
+__pycache__/
+*.pyc
+lab2_env.sh
+.ssh/
+*.pem
+id_rsa*
+id_ed25519*

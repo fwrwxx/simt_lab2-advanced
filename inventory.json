@@ -1,0 +1,83 @@
+{
+  "host": "localhost",
+  "project": "lab1",
+  "collected_at": "2026-10-29T13:08:22.571795+00:00",
+  "cli": [
+    {
+      "id": "6e416a0540ed2c092c4e8f3e57e5aa6078ee7e1d589bb5bbc60f5f18b9663715",
+      "service": "proxy",
+      "image": "nginx:1.27-alpine",
+      "state": "running",
+      "started_at": "2026-10-29T12:14:11.118257783Z",
+      "networks": {
+        "lab1_frontend": "172.30.0.3"
+      },
+      "ports": [
+        "80/tcp -> 0.0.0.0:8080",
+        "80/tcp -> [::]:8080"
+      ]
+    },
+    {
+      "id": "30c241672662a132454a906bae67eaa4231e66bf1a3731ab219178d9c899e579",
+      "service": "app",
+      "image": "lab1-app",
+      "state": "running",
+      "started_at": "2026-10-29T12:14:05.464205993Z",
+      "networks": {
+        "lab1_backend": "172.31.0.3",
+        "lab1_frontend": "172.30.0.2"
+      },
+      "ports": []
+    },
+    {
+      "id": "47bd9ed0deb106207b9148475b069742a12d248a8517aad4841324ae5df30579",
+      "service": "db",
+      "image": "redis:7-alpine",
+      "state": "running",
+      "started_at": "2026-10-29T12:55:57.254311174Z",
+      "networks": {
+        "lab1_backend": "172.31.0.2"
+      },
+      "ports": []
+    }
+  ],
+  "api": [
+    {
+      "id": "6e416a0540ed2c092c4e8f3e57e5aa6078ee7e1d589bb5bbc60f5f18b9663715",
+      "service": "proxy",
+      "image": "nginx:1.27-alpine",
+      "state": "running",
+      "started_at": "2026-10-29T12:14:11.118257783Z",
+      "networks": {
+        "lab1_frontend": "172.30.0.3"
+      },
+      "ports": [
+        "0.0.0.0:8080->80/tcp",
+        ":::8080->80/tcp"
+      ]
+    },
+    {
+      "id": "30c241672662a132454a906bae67eaa4231e66bf1a3731ab219178d9c899e579",
+      "service": "app",
+      "image": "lab1-app",
+      "state": "running",
+      "started_at": "2026-10-29T12:14:05.464205993Z",
+      "networks": {
+        "lab1_backend": "172.31.0.3",
+        "lab1_frontend": "172.30.0.2"
+      },
+      "ports": []
+    },
+    {
+      "id": "47bd9ed0deb106207b9148475b069742a12d248a8517aad4841324ae5df30579",
+      "service": "db",
+      "image": "redis:7-alpine",
+      "state": "running",
+      "started_at": "2026-10-29T12:55:57.254311174Z",
+      "networks": {
+        "lab1_backend": "172.31.0.2"
+      },
+      "ports": []
+    }
+  ]
+}
